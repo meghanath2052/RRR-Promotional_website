@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>Trailers</title>
+    <title>RRR</title>
+	<link rel="icon" type="image/x-icon" href="images\RRR_Telugu_logo.webp">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="css/trailers.css">
+</head>
+<body>
+    <header>
+	
+        <nav>
+            <div class="logo"> <h1 style="font-size: 20px;"><img src="images\RRR_Telugu_logo.webp" style="width: 100px; height: 75px;"></h1> </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">gallery</a>
+                <a href="cast.html">Cast & Crew</a>
+                <a href="trailers.html">Trailers</a>
+            </div>
+        </nav>
+        </header>
+	<div class="container">
+		<h1>Trailers</h1>
+		<div class="row">
+			<div class="col">
+				<div class="feature-img">
+					<img src="images/trailer1.webp" width="100%">
+					<img src="images/play.png" class="play-btn" onclick="playVideo('videos/vid1.webm')">
+				</div>
+			</div>
+			<div class="col">
+				<div class="small-img-row">
+					<div class="small-img">
+						<img src="images/trailer2.jpg">
+						<img src="images/play.png" class="play-btn" onclick="playVideo('videos/vid2.webm')">
+					</div>
+					<p>राइज रोर रिवोल्ट - Hindi Trailer</p>
+				</div>
+				<div class="small-img-row">
+					<div class="small-img">
+						<img src="images/trailer3.jpg">
+						<img src="images/play.png" class="play-btn" onclick="playVideo('videos/vid3.webm')">
+					</div>
+					<p>இரத்தம் ரணம் ரௌத்திரம் - Tamil Trailer</p>
+				</div>
+				<div class="small-img-row">
+					<div class="small-img">
+						<img src="images/trailer4.jpg">
+						<img src="images/play.png" class="play-btn" onclick="playVideo('videos/vid4.webm')">
+					</div>
+					<p>ರೌದ್ರ ರಣ ರುಧಿರ - Kannada Trailer</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="video-player" id="videoPlayer">
+		<video width="100%" controls autoplay id="myVideo">
+			<source src="videos/vid1.webm" type="video/webm">
+		</video>
+		<img src="images/close.png" class="close-btn" onclick="stopVideo()">
+	</div>
+
+
+<script>
+	var videoPlayer = document.getElementById("videoPlayer");
+	var myVideo = document.getElementById("myVideo");
+	
+	function stopVideo(){
+		videoPlayer.style.display = "none";
+	}
+
+	function playVideo(file){
+		myVideo.src = file;
+		videoPlayer.style.display = "block";
+	}
+
+</script>
+</body>
+</html>
